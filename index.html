@@ -11,18 +11,28 @@
     <div id="container">
       <!--header container-->
       <div id="header">
-        <h1>Beachyshells Weather Forecast</h1>
+        <header>
+          <h1>Beachyshells Weather Forecast</h1>
+        </header>
       </div>
 
       <!--search engine container-->
       <div id="search-engine">
-        <input type="search" id="search-city" />
-        <button id="iniate-search">Search</button>
+        <form id="search-form">
+          <input type="search" id="search-city" />
+          <button id="iniate-search">Search</button>
+        </form>
+        <h2>Current City</h2>
       </div>
+
       <!--weather forecast current information container-->
       <div id="weather-forecast">
+        <p></p>
         <!--weather icon and temperature container-->
-        <div id="weather-temperature"></div>
+        <div id="weather-temperature">
+          <img src="" alt="weather icon" id="current-weather-icon" />Current
+          temp°
+        </div>
         <div id="five-day-forecast">
           <ul>
             <li></li>
