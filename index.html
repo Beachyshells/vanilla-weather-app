@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Weather Forecast</title>
   </head>
@@ -12,7 +22,7 @@
       <!--header container-->
       <div id="header">
         <header>
-          <h1>Beachyshells Weather Forecast</h1>
+          <h1 class="title">Beachyshells Weather Forecast</h1>
         </header>
       </div>
 
@@ -20,22 +30,22 @@
       <div id="search-engine">
         <form id="search-form">
           <input type="search" id="search-city" placeholder="Enter City..." />
-          <input type="submit" value="search" id="iniate-search" />
+          <input type="submit" value="Search" id="iniate-search" />
         </form>
-        <h2>Current City</h2>
       </div>
 
       <!--weather forecast current information container-->
       <div id="weather-forecast">
+        <h2>Current City</h2>
         <p>
-          Current day Current time, current description of weather<br />
-          humidity: wind:
+          Sunday 00:00 current description of weather<br />
+          humidity: % wind: mph
         </p>
+
         <!--make sure the time zones are correct depending on city search-->
         <!--weather icon and temperature container-->
         <div id="weather-temperature">
-          <img src="" alt="weather icon" id="current-weather-icon" />Current
-          temp°
+          <img src="" alt="weather icon" id="current-weather-icon" />☁️ 🌡️°
         </div>
         <div id="five-day-forecast">
           <ul>
