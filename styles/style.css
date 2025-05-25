@@ -1,20 +1,31 @@
 body {
   background-color: rgb(193, 227, 241);
-
-  font-family: "Overlock SC", sans-serif;
-  font-size: 1.2rem;
-  color: #333;
+  color: #0e045b;
 }
+
 #container {
   background-color: white;
-  width: 90%;
+  width: 80%;
   max-width: 600px;
   padding: 20px;
   margin: 40px auto;
   border-radius: 10px;
   box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
-@media (max-width: 600px) {
+
+#heading-emoji {
+  font-size: 4rem;
+}
+.title {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Overlock SC", sans-serif;
+  font-weight: lighter;
+}
+
+@media (max-width: 700px) {
   #search-city {
     width: 100%;
     margin: 5px 0;
@@ -23,16 +34,23 @@ body {
     width: 100%;
     margin: 5px 0;
   }
+  .title {
+    font-family: "Overlock SC", sans-serif;
+    font-size: 1.2rem;
+  }
 }
 
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-family: "Overlock SC", sans-serif;
-  font-size: 2rem;
-  font-weight: lighter;
+@media (max-width: 400px) {
+  #container {
+    width: 90%;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 20px 30px rgba(65, 50, 100, 0.08);
+  }
+  .title {
+    font-size: 1rem;
+  }
 }
 
 .fredericka-the-great-regular {
@@ -58,11 +76,11 @@ body {
 }
 
 #search-city {
-  display: flexbox;
-  justify-content: center;
-  width: max-content;
-  max-width: 400px;
-  height: 50px;
+  flex: 1;
+  min-width: 200px;
+  max-width: 600px;
+
+  height: 40px;
   margin: 1.5px;
   padding: 5px;
   border-radius: 5px;
@@ -73,7 +91,7 @@ body {
 #iniate-search {
   width: 100%;
   max-width: 100px;
-  height: 50px;
+  height: 40px;
   margin: 1.5px;
   padding: 5px;
   border-radius: 5px;
