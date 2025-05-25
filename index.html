@@ -10,6 +10,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap"
       rel="stylesheet"
     />
@@ -17,76 +21,79 @@
     <title>Weather Forecast</title>
   </head>
   <body>
-    <!--app container -->
     <div id="container">
-      <!--header container-->
-      <div id="header">
-        <header>
-          <h1 class="title">
-            <span id="heading-emoji">🌤️</span>Beachyshells Weather Forecast
-          </h1>
-        </header>
-      </div>
+      <div id="info-container">
+        <div id="header">
+          <header>
+            <h1 class="title">
+              <span id="heading-emoji">🌤️</span>Beachyshells Weather Forecast
+            </h1>
+          </header>
+        </div>
 
-      <!--search engine container-->
-      <div id="search-engine">
-        <form id="search-form">
-          <input type="search" id="search-city" placeholder="Enter City..." />
-          <input type="submit" value="Search" id="iniate-search" />
-        </form>
-      </div>
-
-      <div id="weather-forecast">
-        <h2>Current City</h2>
+        <div id="search-engine">
+          <form id="search-form">
+            <input type="search" id="search-city" placeholder="Enter City..." />
+            <input type="submit" value="Search" id="iniate-search" />
+          </form>
+        </div>
         <div id="weather-info">
+          <h2>
+            Current City<img
+              src=""
+              alt="weather icon"
+              id="current-weather-icon"
+            />65°F
+          </h2>
+        </div>
+
+        <div id="weather-forecast">
           <p class="current-forecast">
-            Sunday 00:00 current description of weather<br />
+            Sunday 00:00
+            <span id="description">current description of weather</span><br />
             humidity: % wind: mph
           </p>
-
-          <div id="weather-temperature">
-            <img src="" alt="weather icon" id="current-weather-icon" />☁️ 🌡️°
-          </div>
         </div>
-      </div>
-      <div id="five-day-forecast">
-        <ul>
-          <li>
-            <div class="forecast-item">
-              Day 1
-              <div class="temperature">Temp</div>
-              <div class="high-low">High/Low</div>
-            </div>
-          </li>
-          <li>
-            <div class="forecast-item">
-              Day 2
-              <div class="temperature">Temp</div>
-              <div class="high-low">High/Low</div>
-            </div>
-          </li>
-          <li>
-            <div class="forecast-item">
-              Day 3
-              <div class="temperature">Temp</div>
-              <div class="high-low">High/Low</div>
-            </div>
-          </li>
-          <li>
-            <div class="forecast-item">
-              Day 4
-              <div class="temperature">Temp</div>
-              <div class="high-low">High/Low</div>
-            </div>
-          </li>
-          <li>
-            <div class="forecast-item">
-              Day 5
-              <div class="temperature">Temp</div>
-              <div class="high-low">High/Low</div>
-            </div>
-          </li>
-        </ul>
+
+        <div id="five-day-forecast">
+          <ul>
+            <li>
+              <div class="forecast-item">
+                Day 1
+                <div class="temperature">Temp</div>
+                <div class="high-low">High/Low</div>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-item">
+                Day 2
+                <div class="temperature">Temp</div>
+                <div class="high-low">High/Low</div>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-item">
+                Day 3
+                <div class="temperature">Temp</div>
+                <div class="high-low">High/Low</div>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-item">
+                Day 4
+                <div class="temperature">Temp</div>
+                <div class="high-low">High/Low</div>
+              </div>
+            </li>
+            <li>
+              <div class="forecast-item">
+                Day 5
+                <div class="temperature">Temp</div>
+                <div class="high-low">High/Low</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
       <!--Author information container-->
       <div id="author-information">
