@@ -6,10 +6,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
-      rel="stylesheet"
-    />
-    <link
       href="https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap"
       rel="stylesheet"
     />
@@ -26,7 +22,10 @@
         <div id="header">
           <header>
             <h1 class="title">
-              <span id="heading-emoji">🌤️</span>Beachyshells Weather Forecast
+              <img
+                src="styles\weather-app-icon.png"
+                id="heading-emoji"
+              />Beachyshells Weather Forecast
             </h1>
           </header>
         </div>
@@ -37,59 +36,49 @@
             <input type="submit" value="Search" id="iniate-search" />
           </form>
         </div>
-        <div id="weather-info">
-          <h2>
-            Current City<img
-              src=""
-              alt="weather icon"
-              id="current-weather-icon"
-            />65°F
-          </h2>
-        </div>
 
-        <div id="weather-forecast">
-          <p class="current-forecast">
-            Sunday 00:00
-            <span id="description">current description of weather</span><br />
-            humidity: % wind: mph
-          </p>
+        <h2 class="current-city">Current City</h2>
+        <div id="weather-forecast-container">
+          <div id="weather-forecast">
+            <p class="current-forecast">
+              Sunday 00:00<span id="description">
+                current description of weather</span
+              >
+              <br />
+              Humidity: % Wind: mph
+            </p>
+          </div>
+          <div id="current-temperature">
+            <span class="current-emoji">🌤️</span>
+            <span class="current-temp">65</span>
+            <span class="unit">°F</span>
+          </div>
         </div>
-
-        <div id="five-day-forecast">
+        <div class="five-day-forecast">
           <ul>
             <li>
               <div class="forecast-item">
-                Day 1
-                <div class="temperature">Temp</div>
-                <div class="high-low">High/Low</div>
+                Day 1<br /><span>Temp</span><br /><span>High/Low</span>
               </div>
             </li>
             <li>
               <div class="forecast-item">
-                Day 2
-                <div class="temperature">Temp</div>
-                <div class="high-low">High/Low</div>
+                Day 2<br /><span>Temp</span><br /><span>High/Low</span>
               </div>
             </li>
             <li>
               <div class="forecast-item">
-                Day 3
-                <div class="temperature">Temp</div>
-                <div class="high-low">High/Low</div>
+                Day 3<br /><span>Temp</span><br /><span>High/Low</span>
               </div>
             </li>
             <li>
               <div class="forecast-item">
-                Day 4
-                <div class="temperature">Temp</div>
-                <div class="high-low">High/Low</div>
+                Day 4<br /><span>Temp</span><br /><span>High/Low</span>
               </div>
             </li>
             <li>
               <div class="forecast-item">
-                Day 5
-                <div class="temperature">Temp</div>
-                <div class="high-low">High/Low</div>
+                Day 5<br /><span>Temp</span><br /><span>High/Low</span>
               </div>
             </li>
           </ul>
