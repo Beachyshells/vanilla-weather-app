@@ -1,32 +1,28 @@
 body {
   background-color: rgb(193, 227, 241);
   color: #0e045b;
+  width: 100%;
+  padding: 40px;
 }
 
 #container {
   background-color: white;
-  width: 80%;
-  max-width: 600px;
+  width: 70%;
+  max-width: 700px;
   padding: 20px;
-  margin: 40px auto;
+  margin: 0 auto;
   border-radius: 10px;
   box-shadow: 1px 1px 15px;
 }
 /* Responsive Design */
-@media (max-width: 400px) {
-  #container {
-    width: 90%;
-    padding: 10px;
-    margin: 20px auto;
-    border-radius: 5px;
-  }
-}
 
 #info-container {
   background-color: rgb(193, 227, 241);
   padding: 15px;
   box-shadow: 1px 1px 15px;
   border-radius: 10px;
+  width: 80%;
+  margin: 15px auto;
 }
 
 img {
@@ -45,32 +41,34 @@ img {
 }
 
 #search-city {
-  border: 2px solid #0e045b;
+  border: none;
   color: #0e045b;
+  font-size: 18px;
   font-weight: 300;
-  height: 40px;
+
   margin: 1.5px;
   margin-bottom: 40px;
-  padding: 5px;
+  padding: 5px 5px;
   border-radius: 5px;
   background-color: #f0f0f0;
   opacity: 60%;
   width: 60%;
+  max-width: 400px;
 }
 
 #iniate-search {
   color: #0e045b;
+  font-size: 18px;
   letter-spacing: 1px;
-  width: 100%;
-  max-width: 100px;
-  height: 40px;
+  padding: 5px 5px;
   margin: 1.5px;
   margin-bottom: 40px;
   margin-right: 20px;
-  padding: 5px;
+
   border-radius: 5px;
-  border: 2px solid #0e045b;
+  border: none;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 150ms ease-in-out;
 }
 #iniate-search:hover {
   background-color: #e0e0e0;
@@ -78,86 +76,50 @@ img {
   box-shadow: none;
 }
 
-/* Responsive Design */
-@media (max-width: 700px) {
-  #search-city {
-    width: 100%;
-    margin: 15px 10px;
-  }
-  #iniate-search {
-    width: 100%;
-    margin: 15px 10px;
-  }
-  .title {
-    font-family: "Overlock SC", sans-serif;
-    font-size: 1.5rem;
-  }
-}
-
 #search-form {
+  display: flex;
+
+  justify-content: center;
   width: 100%;
   background-color: rgb(193, 227, 241);
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  flex-wrap: nowrap;
-}
 
-h2 {
-  width: 80%;
-  font-size: 2rem;
-  margin-top: 0;
-  margin-bottom: 0px;
+  font-weight: bolder;
+  padding: 0;
 }
-
 #weather-forecast-container {
   display: flex;
   justify-content: space-between;
+
   line-height: 1.5;
-  font-size: 1.15rem;
+
   margin-bottom: 20px;
 }
+h2 {
+  margin: 0;
 
-@media (max-width: 700px) {
-  #weather-forecast-container {
-    font-size: 1rem;
-  }
+  font-family: "Overlock SC", sans-serif;
+  font-weight: lighter;
+  font-size: 4vw;
 }
-@media (max-width: 600px) {
-  #weather-forecast-container {
-    font-size: 0.8rem;
-  }
-}
-@media (max-width: 500px) {
-  #weather-forecast-container {
-    font-size: 0.75rem;
-  }
+
+#current-temperature {
+  font-family: "sans-serif";
+  font-size: 4vw;
+  display: flex;
+  width: fit-content;
+  align-items: center;
 }
 
 .current-emoji {
-  display: inline-block;
-  font-size: 4rem;
+  display: inline;
+  font-size: 4vw;
   margin-right: 10px;
-  translate: 0 -40px;
-}
-.current-temp {
-  font-size: 4rem;
-  font-weight: bold;
 }
 .unit {
-  display: inline-block;
-  translate: -5px -25px;
-  font-size: 1.7rem;
-  font-weight: normal;
-  margin-left: 5px;
+  font-size: 2vw;
+  margin-bottom: -2px;
 }
-.five-day-forecast {
-  display: flex;
 
-  background-color: rgb(16, 149, 206);
-}
-.forecast-item {
-}
 ul {
   list-style: none;
   margin: auto;

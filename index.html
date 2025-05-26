@@ -17,8 +17,11 @@
     <title>Weather Forecast</title>
   </head>
   <body>
+    <!-- Main container for the weather app -->
     <div id="container">
+      <!-- for asthetics only -->
       <div id="info-container">
+        <!-- Header section with title -->
         <div id="header">
           <header>
             <h1 class="title">
@@ -29,38 +32,49 @@
             </h1>
           </header>
         </div>
-
+        <!-- Search engine container -->
         <div id="search-engine">
           <form id="search-form">
-            <input type="search" id="search-city" placeholder="Enter City..." />
+            <input
+              type="search"
+              id="search-city"
+              placeholder="Enter City..."
+              required
+            />
             <input type="submit" value="Search" id="iniate-search" />
           </form>
         </div>
-
-        <h2 class="current-city">Current City</h2>
-        <div id="weather-forecast-container">
-          <div id="weather-forecast">
-            <p class="current-forecast">
-              Sunday 00:00<span id="description">
-                current description of weather</span
-              >
-              <br />
-              Humidity: % Wind: mph
-            </p>
+        <!-- Current weather container -->
+        <div>
+          <div id="weather-forecast-container">
+            <h2 class="current-city">Current City</h2>
+            <div id="current-temperature">
+              <span class="current-emoji">🌤️</span>
+              <span class="current-temp">65</span>
+              <span class="unit">°F</span>
+            </div>
           </div>
-          <div id="current-temperature">
-            <span class="current-emoji">🌤️</span>
-            <span class="current-temp">65</span>
-            <span class="unit">°F</span>
+          <p class="current-forecast"></p>
+          <div id="weather-forecast">
+            <span id="todays-day">Sunday</span>
+            <span id="hours"> 00</span>:<span id="minutes"> 00</span>
+
+            <span id="description"> current description of weather</span>
+            <br />
+            Humidity:<span id="humidity">10</span> % Wind:<span
+              id="wind"
+            ></span>
+            mph
           </div>
         </div>
+
+        <!--Five day forecast container-->
         <div class="five-day-forecast">
           <ul>
-            <li>
-              <div class="forecast-item">
-                Day 1<br /><span>Temp</span><br /><span>High/Low</span>
-              </div>
-            </li>
+            <div class="forecast-item">
+              <li>Day 1<br /><span>Temp</span><br /><span>High/Low</span></li>
+            </div>
+
             <li>
               <div class="forecast-item">
                 Day 2<br /><span>Temp</span><br /><span>High/Low</span>
