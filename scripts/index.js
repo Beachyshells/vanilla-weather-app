@@ -1,17 +1,73 @@
+let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+function updateTime() {
+  let now = new Date();
+  let currentDay = days[now.getDay()];
+  let today = document.getElementById("todays-day");
+  today.innerHTML = currentDay;
+
+  let currentHour = now.getHours();
+  let currentMinute = now.getMinutes();
+  let hoursElement = document.getElementById("hours");
+  let minutesElement = document.getElementById("minutes");
+
+  if (currentMinute < 10) {
+    currentMinute = "0" + currentMinute;
+  }
+  minutesElement.innerHTML = currentMinute;
+  hoursElement.innerHTML = currentHour;
+}
+updateTime();
+setInterval(updateTime, 1000);
+
+function displayWeather(response) {
+  console.log(response.data);
+
+  let humidityElement = document.querySelector(".humidity");
+  humidityElement.innerHTML = response.data.temperature.humidity;
+
+  let windElement = document.querySelector(".wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+
+  let temperatureElement = document.querySelector(".current-temp");
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  temperatureElement.style.display = "inline";
+
+  let unitElement = document.querySelector(".unit");
+  unitElement.style.display = "inline";
+
+  let descriptionElement = document.querySelector(".description");
+  descriptionElement.innerHTML = response.data.condition.description;
+
+  let iconElement = document.querySelector(".current-emoji");
+  iconElement.src = response.data.condition.icon_url;
+}
+
+function getWeather(city) {
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=b9aaeaaf97004f2a03afob830bt63baf&units=imperial`;
+  axios.get(url).then(displayWeather);
+}
+
 function showCity(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-city").value;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = city;
-}
-let button = document.querySelector("#iniate-search");
-button.addEventListener("click", showCity);
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=b9aaeaaf97004f2a03afob830bt63baf&units=imperial`;
-let apiKey = "b9aaeaaf97004f2a03afob830bt63baf";
-axios.get(
-  `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`
-);
-axios.get(apiUrl).then(response);
+  let cityInput = document.querySelector(".city").value;
+  let capitalizedCity = capitalizeFirstLetter(cityInput);
+  let currentCity = document.querySelector(".current-city");
+  currentCity.innerHTML = capitalizedCity;
 
-response = response.data;
-console.log(response.data);
+  getWeather(cityInput);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", showCity);
