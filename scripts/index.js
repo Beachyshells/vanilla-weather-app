@@ -8,9 +8,13 @@ let days = [
   "Friday",
   "Saturday",
 ];
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+function capitalizeWords(cityInput) {
+  return cityInput
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
 }
+
 function updateTime() {
   let now = new Date();
   let currentDay = days[now.getDay()];
@@ -61,9 +65,10 @@ function getWeather(city) {
 
 function showCity(event) {
   event.preventDefault();
-  let cityInput = document.querySelector(".city").value;
-  let capitalizedCity = capitalizeFirstLetter(cityInput);
-  let currentCity = document.querySelector(".current-city");
+
+  let cityInput = document.querySelector("#search-city").value;
+  let capitalizedCity = capitalizeWords(cityInput);
+  let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = capitalizedCity;
 
   getWeather(cityInput);

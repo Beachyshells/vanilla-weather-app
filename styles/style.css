@@ -86,8 +86,10 @@ img {
 #weather-forecast-container {
   display: flex;
   justify-content: space-between;
-  line-height: 1.5;
-  margin-bottom: 10px;
+  padding: 10px;
+}
+#weather-forecast {
+  font-size: 1.1em;
 }
 h2 {
   margin: 0;
@@ -95,6 +97,12 @@ h2 {
   font-family: "Overlock SC", sans-serif;
   font-weight: lighter;
   font-size: 4vw;
+}
+
+.current-emoji {
+  display: inline;
+  font-size: 4vw;
+  margin-right: 10px;
 }
 
 #current-temperature {
@@ -105,23 +113,32 @@ h2 {
   align-items: center;
 }
 
-.current-emoji {
-  display: inline;
-  font-size: 4vw;
-  margin-right: 10px;
-}
 .unit {
   font-size: 2vw;
   margin-bottom: -2px;
 }
 
-#weather-forecast {
-  font-size: 1.65vw;
+.description {
+  display: inline;
+  margin-left: 20px;
+  font-weight: lighter;
+  font-size: 0.9em;
+  font-family: "Overlock SC", sans-serif;
+}
+.five-day-forecast ul {
+  display: flex;
+  list-style: none;
+
   padding: 0;
-  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.forecast-item {
+  flex: 1;
+  text-align: center;
 }
 
 ul {
-  list-style: none;
-  margin: auto;
+  font-size: 0.8em;
+  width: 100%;
 }
