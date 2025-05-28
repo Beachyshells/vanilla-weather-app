@@ -30,6 +30,7 @@
               <img
                 src="styles\weather-app-icon.png"
                 id="heading-emoji"
+                class="heading-emoji"
               />Beachyshells Weather Forecast
             </h1>
           </header>
@@ -49,25 +50,30 @@
         </div>
         <!-- Current weather container -->
         <div>
-          <div id="weather-forecast-container">
+          <div id="current-weather-container">
             <h2 class="current-city" id="current-city"></h2>
-            <div id="current-temperature">
-              <span class="current-emoji"></span>
-              <span class="current-temp"></span>
-              <span class="unit">°F</span>
+            <div id="current-temperature-container">
+              <span class="current-emoji" id="current-emoji"
+                ><img src="" id="weather-icon" class="weather-icon"
+              /></span>
+              <span class="current-temp" id="current-temp" style="display: none"
+                >0°</span
+              >
+              <span class="unit" id="degree" style="display: none">°F</span>
             </div>
           </div>
 
           <div id="weather-forecast">
             <span id="todays-day">Sunday</span>
             <span id="hours"> 00</span>:<span id="minutes"> 00</span>
-
-            <span class="description"></span>
+            <div id="description-container">
+              <span class="description" id="description"></span>
+            </div>
             <br />
-            Humidity:<span class="humidity">10</span> % Wind:<span
-              class="wind"
-            ></span>
-            mph
+            <div class="description-container">
+              Humidity:<span id="humidity" class="humidity"></span>% Wind:
+              <span class="wind"></span>mph
+            </div>
           </div>
         </div>
 
@@ -108,6 +114,7 @@
           </ul>
         </div>
       </div>
+
       <!--Author information container-->
       <div id="author-information">
         <footer>

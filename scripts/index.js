@@ -48,13 +48,13 @@ function displayWeather(response) {
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
   temperatureElement.style.display = "inline";
 
-  let unitElement = document.querySelector(".unit");
-  unitElement.style.display = "inline";
+  let degreeElement = document.querySelector("#degree");
+  degreeElement.style.display = "inline";
 
-  let descriptionElement = document.querySelector(".description");
+  let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = response.data.condition.description;
 
-  let iconElement = document.querySelector(".current-emoji");
+  let iconElement = document.querySelector("#weather-icon");
   iconElement.src = response.data.condition.icon_url;
 }
 
@@ -72,6 +72,7 @@ function showCity(event) {
   currentCity.innerHTML = capitalizedCity;
 
   getWeather(cityInput);
+  console.log(cityInput);
 }
 
 let searchForm = document.querySelector("#search-form");
